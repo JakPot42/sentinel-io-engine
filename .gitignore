@@ -6,8 +6,11 @@ venv/
 .venv/
 *.db
 *.sqlite
+*.db-wal
+*.db-shm
 *.log
 .pytest_cache/
 dist/
 build/
 *.egg-info/
+.claude/

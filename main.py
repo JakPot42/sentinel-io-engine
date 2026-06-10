@@ -24,6 +24,11 @@ templates = Jinja2Templates(directory="templates")
 @app.on_event("startup")
 def startup():
     init_db()
+    db = SessionLocal()
+    try:
+        load_seed_data(db)
+    finally:
+        db.close()
 
 
 def _ctx(extra: dict | None = None) -> dict:
