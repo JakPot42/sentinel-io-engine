@@ -76,7 +76,7 @@ Respond ONLY with valid JSON (no markdown fences, no explanation):
         return data
     except AnalystError:
         raise
-    except anthropic.APIError as exc:
+    except Exception as exc:
         raise AnalystError(f"API error during narrative extraction: {exc}") from exc
 
 
@@ -129,7 +129,7 @@ Respond ONLY with valid JSON:
         return data
     except AnalystError:
         raise
-    except anthropic.APIError as exc:
+    except Exception as exc:
         raise AnalystError(f"API error during TTP analysis: {exc}") from exc
 
 
@@ -177,5 +177,5 @@ Write a concise intelligence assessment. Respond ONLY with valid JSON:
         return data
     except AnalystError:
         raise
-    except anthropic.APIError as exc:
+    except Exception as exc:
         raise AnalystError(f"API error during report generation: {exc}") from exc
