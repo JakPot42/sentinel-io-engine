@@ -54,7 +54,7 @@ Influence operations work by seeding a false narrative across multiple outlets s
 
 ```bash
 # 1. Clone
-git clone https://github.com/JaKPoT-Sudo/sentinel-io-engine.git
+git clone https://github.com/JaKPoT/sentinel-io-engine.git
 cd sentinel-io-engine
 
 # 2. Add your Anthropic API key
